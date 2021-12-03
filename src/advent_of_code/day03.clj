@@ -38,10 +38,6 @@
   (-> (calc-gamma input)
       (bit-xor 2r111111111111)))
 
-(defn filter-by-bit-at-pos
-  [l bit pos]
-  (filter (fn [b] (bit-test (get b pos) bit)) l))
-
 (defn calc-rating
   [input compare-fn]
   (loop [l   input
