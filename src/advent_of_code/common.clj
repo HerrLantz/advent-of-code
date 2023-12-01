@@ -121,3 +121,11 @@
 (defn split-number-words-and-number-character
   [s]
   (map second (re-seq #"(?<=(one|two|three|four|five|six|seven|eight|nine|\d+))" s)))
+
+(defn occurences
+  [word s overlapping?]
+  (let [pattern (if overlapping?
+                  (str "(?<=(" word "))")
+                  word)]
+    (count (re-seq (re-pattern pattern) s))))
+
