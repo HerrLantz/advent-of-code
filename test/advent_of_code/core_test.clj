@@ -1,6 +1,6 @@
-(ns aoc-2023.core-test
+(ns advent-of-code.core-test
   (:require [clojure.test :refer :all]
-            [aoc-2023.core :refer :all]))
+            [advent-of-code.core :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."
