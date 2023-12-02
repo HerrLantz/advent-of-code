@@ -1,4 +1,4 @@
-(ns advent-of-code.core
+(ns advent-of-code.day1
   (:require [advent-of-code.common :as common]))
 
 (def first-star
