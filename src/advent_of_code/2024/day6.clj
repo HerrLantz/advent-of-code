@@ -1,4 +1,4 @@
-(ns advent-of-code.day6
+(ns advent-of-code.2024.day6
   (:require [advent-of-code.common :as common]
             [clojure.string :as str]))
 
@@ -51,7 +51,7 @@
         new-m
         (recur (rotate new-m))))))
 
-(->> (common/file->string-list "day6.txt")
+(->> (common/file->string-list "./2024/day6.txt")
      init-lab
      draw-path
      flatten

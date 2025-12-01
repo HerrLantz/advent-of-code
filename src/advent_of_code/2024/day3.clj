@@ -1,7 +1,7 @@
-(ns advent-of-code.day3
+(ns advent-of-code.2024.day3
   (:require [advent-of-code.common :as common]))
 
-(def part1 (->> (common/file->string "day3.txt")
+(def part1 (->> (common/file->string "./2024/day3.txt")
                 (re-seq #"mul\(\d{1,3},\d{1,3}\)")
                 (map common/numbers-in-string->number-seq)
                 (map #(apply * %))
@@ -23,7 +23,7 @@
                                     res-l)
                                   keep?)))))
 
-(def part2 (->> (common/file->string "day3.txt")
+(def part2 (->> (common/file->string "./2024/day3.txt")
                 (re-seq #"mul\(\d{1,3},\d{1,3}\)|do\(\)|don't\(\)")
                 (map #(common/re-place-with-value #"do\(\)" true %))
                 (map #(common/re-place-with-value #"don't\(\)" false %))

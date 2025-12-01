@@ -1,8 +1,8 @@
-(ns advent-of-code.day4
+(ns advent-of-code.2024.day4
   (:require [advent-of-code.common :as common]))
 
 (def part1
-  (let [horizontal (common/file->string-list "day4.txt")
+  (let [horizontal (common/file->string-list "./2024/day4.txt")
         vertical   (map #(apply str %) (common/transpose horizontal))
         left-diag  (map #(apply str %) (common/rotate-matrix-left horizontal))
         right-diag (map #(apply str %) (common/rotate-matrix-right horizontal))
@@ -25,7 +25,7 @@
            (= bot [\S \M]))))
 
 (def part2
-  (let [input   (map seq (common/file->string-list "day4.txt"))
+  (let [input   (map seq (common/file->string-list "./2024/day4.txt"))
         x-count (count (first input))
         y-count (count input)]
     (loop [curr-x 1

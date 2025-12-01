@@ -1,4 +1,4 @@
-(ns advent-of-code.day5
+(ns advent-of-code.2024.day5
   (:require [advent-of-code.common :as common]
             [clojure.set :as set]))
 
@@ -40,13 +40,13 @@
     1))
 
 (def part1
-  (let [[ord upd] (common/split-empty-lines (common/file->string "day5.txt"))
+  (let [[ord upd] (common/split-empty-lines (common/file->string "./2024/day5.txt"))
         upd       (parse-update upd)
         ord       (parse-order ord)]
     (count-score (filter #(get-score % ord) upd))))
 
 (def part2
-  (let [[ord upd] (common/split-empty-lines (common/file->string "day5.txt"))
+  (let [[ord upd] (common/split-empty-lines (common/file->string "./2024/day5.txt"))
         upd       (parse-update upd)
         ord       (parse-order ord)
         valid     (filter #(get-score % ord) upd)
