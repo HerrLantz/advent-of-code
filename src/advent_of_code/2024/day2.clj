@@ -1,4 +1,4 @@
-(ns advent-of-code.day2
+(ns advent-of-code.2024.day2
   (:require [advent-of-code.common :as common]))
 
 (defn safe?

@@ -1,4 +1,4 @@
-(ns advent-of-code.day4
+(ns advent-of-code.2024.day4
   (:require [advent-of-code.common :as common]))
 
 (def part1
