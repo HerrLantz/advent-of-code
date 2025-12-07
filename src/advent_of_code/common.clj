@@ -200,3 +200,6 @@
   [k]
   (read-string (name k)))
 
+(defn str->substrs
+  [s]
+  (map #(str/join (take %1 s)) (range 1 (inc (count s)))))
